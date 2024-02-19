@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div class="container-screen">
+      <app-sidebar></app-sidebar>
+      <div class="container-box">
+        <div
+          style="
+            position: fixed;
+            top: 9rem;
+            left: 17rem;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+          "
+        >
+          Trips
+        </div>
+        <ng-container *ngIf="result || result != []">
+          <app-donut [result]="result"></app-donut>
+        </ng-container>
+        <div *ngIf="!result || result === []">Loading...</div>
+      </div>
+      <div class="container-box-right">
+        <div
+          style="
+            position: fixed;
+            top: 9rem;
+            left: 43rem;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+          "
+        >
+          Quotes
+        </div>
+
+        <ng-container *ngIf="resultGraph || resultGraph != []">
+          <app-donut [result]="resultGraph"></app-donut>
+        </ng-container>
+        <div *ngIf="!resultGraph || resultGraph === []">Loading...</div>
+      </div>
+      <div class="container-box-task">
+        <div
+          style="
+            position: fixed;
+            top: 9rem;
+            left: 70rem;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+          "
+        >
+          Tasks and Appointments
+        </div>
+        <div
+          style="
+            position: fixed;
+            top: 15rem;
+            left: 70rem;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            align-items: center;
+            text-align: center;
+          "
+        >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tasks Manager &nbsp;&nbsp;&nbsp;&nbsp;
+          Appointments
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
